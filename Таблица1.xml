@@ -1,0 +1,80 @@
+<!DOCTYPE dataroot [
+<!ELEMENT dataroot (Table*)>
+<!-- Общий корень-->
+<!ELEMENT Table (Element*)>
+
+<!-- Таблица-->
+<!ELEMENT Element (tv_show, Director?, MainActor?)>
+<!ATTLIST Element yearb CDATA #REQUIRED>
+<!ATTLIST Element status (Ongoing|Finished) #IMPLIED>
+<!ELEMENT tv_show (#PCDATA) >
+<!ATTLIST Element Genre (Sciencefiction|Comics|Drama|Fantasy|Crimilal) #REQUIRED>
+<!ELEMENT Director (#PCDATA)>
+<!ELEMENT MainActor (#PCDATA)>
+]>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+	
+	<Table>
+		
+		<Element yearb="1963" Genre="Sciencefiction">
+			<tv_show>Doctor Who</tv_show>
+			
+			<Director>Chris Chibnall</Director>
+			<MainActor/>
+		</Element>
+		
+		<Element yearb="2014"  Genre="Comics">
+			<tv_show>The Flash</tv_show>
+			
+			<Director>Greg Berlanti</Director>
+			<MainActor>Grant Gustin</MainActor>
+		</Element>
+		
+		<Element yearb="2016"  Genre="Drama">
+			<tv_show>Fleabag</tv_show>
+			
+			<Director/>
+			<MainActor>Phoebe Waller-Bridge</MainActor>
+		</Element>
+		
+		<Element yearb="2018" Genre="Drama">
+			<tv_show>Skam France</tv_show>
+			
+			<Director>Xavier Dolan</Director>
+			<MainActor>Axel Auriant</MainActor>
+		</Element>
+		
+		<Element yearb="2012" Genre="Comics">
+			<tv_show>Arrow</tv_show>
+			
+			<Director>Greg Berlanti</Director>
+			<MainActor>Stephen Amell</MainActor>
+		</Element>
+		
+		<Element yearb="2016" Genre="Fantasy">
+			<tv_show>Shadowhunters</tv_show>
+			
+			<Director>Matthew Hastings</Director>
+			<MainActor>Katherine McNamara</MainActor>
+		</Element>
+		
+		<Element yearb="2010" Genre="Crimilal">
+			<tv_show>Sherlock</tv_show>
+			
+			<Director>Steven Moffat</Director>
+			<MainActor>Benedict Cumberbatch</MainActor>
+		</Element>
+		
+		<Element yearb="2015" Genre="Comics" status="Finished">
+			<tv_show>Daredevil</tv_show>
+			
+			<Director/>
+			<MainActor/>
+		</Element>
+		
+	</Table>
+</dataroot>
+
+
